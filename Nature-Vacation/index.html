@@ -52,9 +52,8 @@
           <a-entity vive-controls="hand: right" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
         </a-entity>
 
-        <a-sky src="#background"> </a-sky>
+        <a-entity environment="preset: goaland"></a-entity>
 
-        <!--<a-entity environment="preset: tron"></a-entity>-->
         <a-entity geometry = "primitive: sphere" radius = "1" position = "-0.63 1.4 -3.9" material = "src: #illusion"
         animation="property: rotation; to: 0 360 0; dur: 15000; easing: linear; loop: true;">
         </a-entity>
@@ -64,6 +63,12 @@
 
         <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-4 3 3" rotation="-90 180 0" scale=".5 .5 .5"
         animation="property: position; to: -3 -1 -9; dur: 15000; easing: linear; loop: true;"></a-entity>
+
+        <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="0 4 10" rotation="-90 180 0" scale=".5 .5 .5"
+        animation="property: position; to: 4 4 4; dur: 15000; easing: linear; loop: true;"></a-entity>
+
+        <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-3 1 9" rotation="-90 180 0" scale=".5 .5 .5"
+        animation="property: position; to: 6 0 -10; dur: 15000; easing: linear; loop: true;"></a-entity>
 
         <a-entity obj-model="obj: #smoltree-obj; mtl: #smoltree-mtl" position="0 0 3" rotation="0 0 0" scale="1 1 1"
         animation="property: rotation; to: 0 360 0; dur: 15000; easing: linear; loop: true;"></a-entity>
