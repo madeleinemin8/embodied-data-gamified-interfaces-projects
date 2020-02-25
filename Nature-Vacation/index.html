@@ -20,6 +20,9 @@
 
     <!-- extras library -->
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+    <!-- teleport library -->
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
   </head>
   <body>
     <a-scene physics>
@@ -40,8 +43,18 @@
           <a-asset-item id="frog-mtl" src="models/frog.mtl"></a-asset-item>
         </a-assets>
 
+        <a-entity id="cameraRig" wasd-controls movement-controls>
+          <a-entity camera look-controls position="0 1.7 0"></a-entity>
+          <a-entity id="head" camera="active: true" look-controls wasd-controls position="0 1.6 0"></a-entity>
+          <a-entity oculus-touch-controls="hand: left" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+          <a-entity oculus-touch-controls="hand: right" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+          <a-entity vive-controls="hand: left" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+          <a-entity vive-controls="hand: right" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+        </a-entity>
+
         <a-sky src="#background"> </a-sky>
 
+        <!--<a-entity environment="preset: tron"></a-entity>-->
         <a-entity geometry = "primitive: sphere" radius = "1" position = "-0.63 1.4 -3.9" material = "src: #illusion"
         animation="property: rotation; to: 0 360 0; dur: 15000; easing: linear; loop: true;">
         </a-entity>
