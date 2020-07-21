@@ -1,0 +1,201 @@
+doctype html
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+link(rel='stylesheet' href='/css/style.css')
+link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato')
+link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap')
+link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+style.
+  body {font-family: 'Noto Sans JP', sans-serif;}
+  
+// Navbar
+.nav-top
+  .name-top.light-grey
+    img(src='/images/logo.png')
+    p Maddie Min
+  .nav-bar.black.card
+    a.nav-bar-item.button.padding-large.hide-medium.hide-large.right(href='javascript:void(0)' onclick='showFunction()' title='Toggle Navigation Menu')
+      i.fa.fa-bars
+    a.nav-bar-item.button.padding-large(href='#') HOME
+    a.nav-bar-item.button.padding-large.hide-small(href='#about') ABOUT
+    a.nav-bar-item.button.padding-large.hide-small(href='#projects') PROJECTS
+    a.nav-bar-item.button.padding-large.hide-small(href='#art') ART
+    a.nav-bar-item.button.padding-large.hide-small(href='#contact') CONTACT
+    a.padding-large.hover-red.hide-small.right(href='javascript:void(0)')
+      i.fa.fa-search
+// Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links)
+#navDemo.nav-bar-block.black.hide.hide-medium.hide-medium.nav-top(style='margin-top:46px')
+  a.nav-bar-item.button.padding-large(href='#about' onclick='showFunction()') ABOUT ME
+  a.nav-bar-item.button.padding-large(href='#projects' onclick='showFunction()') PROJECTS
+  a.nav-bar-item.button.padding-large(href='#art' onclick='showFunction()') ART
+  a.nav-bar-item.button.padding-large(href='#contact' onclick='showFunction()') CONTACT
+  a.nav-bar-item.button.padding-large(href='#' onclick='showFunction()') MORE
+  
+// Page content
+.content(style='max-width:2000px;margin-top:0px')
+  
+  // About Me Section
+  #about.container.content.center.slight-grey(style='max-width:100%; padding-top:1.5%')
+    .row.padding-32(style='padding-left:10%; padding-right:10%')
+        .third
+          img.round.margin-bottom(src='/images/me1.jpg' alt='Maddie Min' style='width:80%')
+        .third
+          img.round.margin-bottom(src='/images/me2.jpg' alt='Maddie Min' style='width:80%')
+        .third
+          img.round(src='/images/me3.jpg' alt='Maddie Min' style='width:80%')
+    h2.wide HI, I'M MADDIE...
+    p.center.justify(style='padding-left:12%; padding-right:12%; padding-bottom:5%;')
+      | I&apos;m a third year undergraduate at the University of Chicago, majoring in Computer Science and minoring in Media Arts and Design.
+      | I currently work at the Computer Science Instructional Laboratory (CSIL), providing on-campus (now virtual) technical support and developing our lab wiki.
+      | I'm pursuing a career in software engineering, with a focus in frontend, HCI, and mobile development.
+      | In my free time, I like to go on long runs, listen to music, and make art.
+  // Project Section
+  #projects.dark-grey
+    .container.content.padding-32()
+      h2.wide.center PROJECTS
+      p.opacity.center(style="font-size:24px")
+        i Web and HCI
+      hr
+      .row.padding-16
+        .half(style='padding-left:2%; padding-right:1%')
+          img.hover-opacity(src='/images/windvr.jpg' alt='Me wearing a Vive headset + wind device extension' style='width:100%')
+          .container.white
+            p
+              a(href='https://photos.app.goo.gl/94iyBt4vsCkvo1ZY6' target='_blank') VR Wind Haptic Vive Extension
+            p.opacity Winter 2020
+            p
+              | This attachment to a Vive headset uses an Arduino Uno and angled fans on each side of the head
+              | to produce the sensation of &apos;wind&apos; corresponding to the speed and direction of travel within a Unity racing game.
+        .half(style='padding-left:1%; padding-right:2%')
+          img.hover-opacity(src='/images/explore-team.jpg' alt='NYT Explore team on presentation day' style='width:100%')
+          .container.white
+            p
+              a(href='https://github.com/almadireddy/nyt-explore' target='_blank') NYT Explore
+            p.opacity Summer 2019
+              p
+                | NYT Explore is a stylized, location-based mapping of all Times journalism regarding cultural elements like food/dining, music festivals, art galleries.
+                | Built with Node.js, React, and Go.
+                | I worked on this project with a team of interns on Friday&apos;s during my internship at the New York Times.
+      .row.padding-16
+        .half(style='padding-left:2%; padding-right:1%')
+          img.hover-opacity(src='/images/soundsnek.png' alt='Soundsnek gameplay' style='width:100%')
+          .container.white
+            p
+              a(href='https://youtu.be/vVo9sHLF0ck' target='_blank') SoundSNEK
+            p.opacity Winter 2020
+            p
+              | This is an audio-controlled classic snake game.
+              | Pitch of the input controls turning, while volume controls game speed.
+        .half(style='padding-left:1%; padding-right:2%')
+          img.hover-opacity(src='/images/beat-graphic.png' alt='Beat detection demo graphic' style='width:100%')
+          p
+            a(href='') Beat Detector
+          p.opacity Winter 2020
+          p Detects half, quarter, and eighth notes at a 120 bpm tempo using Google's Teachable Machine.
+      p.opacity.center(style="font-size:24px")
+        i Mobile
+      hr
+      .row.padding-16
+        .third(style='padding-right:2%')
+          img.hover-opacity(src='/images/stormsupport.png' alt='StormSupport interface for Android' style='width:100%')
+          .container.white
+            p
+              b StormSupport for iOS / Android
+            p An application that provides flood hazard map data from FEMA combined with mapped, crowdsourced user data, searchable by location.
+        .third(style='padding-right:1% padding-left:1%')
+          img.hover-opacity(src='/images/onthedot.png' alt='Two screenshots of the app interface' style='width:100%')
+          .container.white
+            p
+              b OnTheDot for Android
+            p A daily routine planner app with Google Maps integration and minute-to-minute notifications.
+        .third(style='padding-left:2%')
+          img.hover-opacity(src='/images/viewsnews.png' alt='' style='width:100%')
+          .container.white
+            p
+              b ViewsNews for Android
+            p A news aggregator that allows the user to mix and compile news articles from different sources, providing multiple viewpoints on each issue of choice.
+    #art.ming-blue
+      .container.content.padding-32
+        h2.wide.center ART
+        .row.padding-32
+          .third(style='padding-left:4%; padding-right:2%')
+            img.hover-opacity(src='/images/colorpiece1.jpg' alt='' style='width:100%')
+          .third(style='padding-left:2%; padding-right:2%')
+            img.hover-opacity(src='/images/colorpiece2.jpg' alt='' style='width:100%')
+          .third(style='padding-left:2%; padding-right:4%')
+            img.hover-opacity(src='/images/monochrome.jpg' alt='' style='width:100%')
+        .row.padding-32
+          .third(style='padding-left:4%; padding-right:2%')
+            img.hover-opacity(src='/images/purplepiece.jpg' alt='' style='width:100%')
+          .third(style='padding-left:2%; padding-right:2%')
+            img.hover-opacity(src='/images/collage.jpg' alt='' style='width:100%')
+          .third(style='padding-left:2%; padding-right:4%')
+            img.hover-opacity(src='/images/colorwall.jpg' alt='' style='width:100%')
+        .row.padding-32
+          .half(style='padding-left:4%; padding-right:2%')
+            img.hover-opacity(src='/images/vr-art.png' alt='Virtual Reality art' style='width:100%')
+            p
+              a(href='https://madeleinemin8.github.io/Nature-Vacation/' target='_blank') VR Art - Natural Confusion.
+            p An immersive piece contrasting natural themes with the warped and engineered lens of virtual reality. Created using P5 and A-Frame for web and Vive.
+          .half(style='padding-left:2%; padding-right:4%')
+            img.hover-opacity(src='/images/remote-art.png' alt="Art piece modeling remote connectivity" style='width:100%')
+            p 
+              a(href='https://madeleinemin8.github.io/finalproject/' target='_blank') Connect 4,000,000
+            p A gamified parody of globalized dependence on remote communication / social media services
+    // The Contact Section
+    //#contact.container.content.padding-64(style='max-width:800px')
+    #contact.container.content.slight-grey.padding-64(style='padding-left:10%; padding-right:10%')
+      h2.wide.center CONTACT
+      p.opacity.center
+        i &quot;Call me, beep me, if you want to reach me!&quot; - Kim Possible
+      .row.padding-32
+        .col.m6.large.margin-bottom
+          i.fa.fa-map-marker(style='width:30px')
+          | Chicago, US
+          br
+          i.fa.fa-phone(style='width:30px')
+          |  Phone: 1(703)6087710
+          br
+          i.fa.fa-envelope(style='width:30px')  
+          |  Email: madeleinemin@uchicago.edu
+          br
+          img(src='/images/link.png' style='width:22px') 
+          a(href='https://www.linkedin.com/in/madeleine-min' target='_blank') !{'\t'}LinkedIn
+          br
+        //.col.m6
+          //form(action='/action_page.php' target='_blank')
+            //.row-padding(style='margin:0 -16px 8px -16px')
+              //.half
+                //input.input.border(type='text' placeholder='Name' required='' name='Name')
+              //.half
+                //input.input.border(type='text' placeholder='Email' required='' name='Email')
+            //input.input.border(type='text' placeholder='Note' required='' name='Note')
+            //button.button.black.section.right(type='submit') SEND
+    // End Page Content
+  // Image of location/map
+  img.image.greyscale-min(src='/images/chicago1.jpg' style='width:100%')
+  // Footer
+  footer.container.padding-64.center.opacity.light-grey.xlarge
+script.
+  var myIndex = 0;
+  //imgCarousel();
+  /*function imgCarousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(imgCarousel, 4000);
+    }*/
+  // Toggle menu on small screens on click
+  function showFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("show") == -1) {
+      x.className += " show";
+    } else {
+      x.className = x.className.replace(" show", "");
+    }
+  }

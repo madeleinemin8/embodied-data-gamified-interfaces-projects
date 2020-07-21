@@ -1,0 +1,19 @@
+{
+  "name": "madeleinem-min-website",
+  "version": "0.1.0",
+  "description": "Built with Node, Express and Pug",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx nodemon server.js"
+  },
+  "author": "Maddie Min",
+  "license": "UChicago",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
